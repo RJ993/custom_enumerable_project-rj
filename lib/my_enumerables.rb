@@ -6,6 +6,13 @@ module Enumerable
     index += 1
     end
   end
+  def my_select
+    array = []
+    for item in self
+      array.push(item) if yield(item)
+    end
+    return array
+  end
 end
 
 # You will first have to define my_each
